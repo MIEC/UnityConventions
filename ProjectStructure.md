@@ -7,7 +7,7 @@
 ```
 Assets
 └─── Scripts
-│   │   Posision.cs
+│   │   Position.cs
 │   │   HideSystem.cs
 │   │   ...
 │   └─── EventSystem

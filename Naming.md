@@ -96,24 +96,3 @@ Exception       |       |PC     |Exception|InvalidExampleException
 Member Variable |_      |cC     |       |_jumpButton
 
 
-# Formatting
-
-* Braces on new lines
-```
-public class GravitySomethingSomething
-{
- 
-  private void Start()
-  {
-    if(condition)
-    {
-      //...
-    }
-  }
-}
-```
-
-* Indentation
-  * 1 tab or
-  * 4 spaces
-  * Configure your IDE to convert tabs to 4 spaces
