@@ -1,6 +1,6 @@
 # Project Structure
 
-## Structuring YOUR project
+## Structuring the project
 
 * Grouping by asset type on root level
 
@@ -16,7 +16,7 @@ Assets
 │   
 └─── Textures
     │   ConcreteWall.png
-    │   CancreteWallNormal.png
+    │   ConcreteWallNormal.png
 ```
 
 ## Other Assets
