@@ -1,4 +1,4 @@
-The following sections will be heavily focused on how to format your names. In programming there are three main casings:
+The following sections will heavily on how to format names in your code. In programming there are three main casings:
 
 * camelCase
   * name starts with a lower cased letter
@@ -10,7 +10,6 @@ The following sections will be heavily focused on how to format your names. In p
   * words are concatenated using underscores
   * not used in C#/.NET
 
-
 ## Acronyms
 * Use PascalCase or camelCase for acronyms based on the convention for names longer than two characters
   * `HttpRequest`
@@ -18,14 +17,11 @@ The following sections will be heavily focused on how to format your names. In p
   * `System.IO`
 * Only use abbreviations if absolutely necessary or commonly known
 
-
-Use meaingful names
-
 ## Namespaces
 
 * Pascal Casing
 
-## Classes & Structs
+## Classes
 
 ```
 public class SomeClass
@@ -33,6 +29,17 @@ public class SomeClass
   //...
 }
 ```
+
+## Structs
+
+```
+public struct Key
+{
+  //...
+}
+```
+
+
 ### Exceptions
 There are a few Exception to this rule.
 
@@ -43,7 +50,9 @@ There are a few Exception to this rule.
 
 ## Abstract classes
 
-## Exception Classes
+* Like Classes
+* Don't use any "abstract" or "base", etc.. keywords
+
 
 ## Interfaces
 * Prefixed by a capital `I`
@@ -66,6 +75,26 @@ interface ICollection
 ## Properties
 
 ## Variables
+
+### Public
+
+**THERE ARE NO PUBLIC VARIABLES**
+Use public properties with or without private backing field.
+If you just want to see the varaible in the inspector use the [SerializeField] attribute
+
+```
+[SerializeField] private bool _theField;
+
+public bool TheField
+{
+  get{ return _theField; }
+  set
+  {
+    //Skip this if no setter is needed 
+  }
+}
+```
+
 ### Static
 `s_goodVariableName`
 
@@ -80,19 +109,34 @@ interface ICollection
 `camelIsNotDeadYet`
 
 ## Enums
-Class and Entries PascalCase
+* Class and Entries PascalCase
+* Singular naming
+  * i.e. `Finger`, not `Fingers`
+
+```
+public Enum Heading
+{
+  North,
+  East,
+  South,
+  West
+}
+```
 
 
 ## Naming overview
 
+Is it public? PascalCase
+Is it a variable? camelCase
+Else: PascalCase
+
 Type            |Prefix |Casing |Suffix |Example          
 ----------------|-------|-------|-------|----------
-Class           |       |PC     |       |PlayerControls          
+Class           |       |PC     |       |PlayerControls      
 Struct          |       |PC     |       |MovementSettings
 Interface       |I      |PC     |       |ISkippable
 Function        |       |PC     |       |SomeFunction
-Property        |       |PC     |       |SomePr
-Exception       |       |PC     |Exception|InvalidExampleException
+Property        |       |PC     |       |SomeProperty
 Member Variable |_      |cC     |       |_jumpButton
-
-
+Local Variable  |       |cC     |       |timer
+Static Variables|s_     |cC     |       |s_instance
