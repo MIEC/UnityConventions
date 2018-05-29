@@ -2,7 +2,7 @@
 
 ## Structuring the project
 
-* Grouping by asset type on root level
+* First level structure is derived by asset type
 
 ```
 Assets
@@ -18,6 +18,8 @@ Assets
     │   ConcreteWall.png
     │   ConcreteWallNormal.png
 ```
+
+* Within the type level the structure should be 
 
 ## Other Assets
 Often a project will contain Assets that are licensed from somewhere else or developed as separate packages. Those assets do not have any dependencies to the project at all, but they will clutter up the project. Altough the new unity package manager solves this problem for many of the unity assets it still remains, this document proposes two ways of handling this issue:
@@ -75,4 +77,4 @@ Assets
 * Assets will definitely work as intended, because they are where meant to be
 
 #### Cons
-* Slightly more complex navigation in your assets
+* Slightly more cumbersome navigation in your assets
