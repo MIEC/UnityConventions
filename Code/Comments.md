@@ -1,5 +1,7 @@
 # Comments
+
 ***DO***
+
 * use the english language
 * write full sentences beginning capitalized and ending with a period
 * be precise
@@ -7,9 +9,11 @@
 * write comments in separate lines above the code they comment
 * use a space between comment delimiters (`//`, `/*`, `*`) and the comment
 
+
 ***DO NOT***
- * use comments to remove parts of code
- * leave outdated comments in the code
+
+* use comments to remove parts of code
+* leave outdated comments in the code
 
 ## Documentation comments
 Documentation comments are formatted using XML tags. These are processed by the compiler, they can be exported into documentation files and shown in IntelliSense.
@@ -37,10 +41,9 @@ public class Input  { }
 ```
 
 ### Methods
-* A method documentation should a include `summary` documentation starting with a verb
-
-* 
-* Thrown exceptions should be documented using the `exceptions` tag which descrobes the reason why there was an exception 
+* A method should atleast be documented with a `summary` tag
+* Method `summary` always begins with a verb
+* 'summary' documents what is done, not how
 
 #### Parameters
 * If there are method parameter they should be documented with `param`
@@ -51,9 +54,9 @@ public class Input  { }
 * A return value should be documented using the `returns` tag
 * In case of `bool` returns the description should follow the concept of `true if condition; else false`
 
-#### Exception
-* If a functions might throw an exception that needs catching it should be documented
-* Use the `exception` tag with a reference to the type of an exception and describe why an exception occurred
+#### Exceptions
+* An exception that needs catching should be documented
+* Use the `exception` tag with a reference to the type of an exception and state the reason why an exception occurred
 
 ```
 /// <summary>
@@ -70,7 +73,7 @@ public void WriteMeshToFile(string path, bool overwriteExisting)
 ```
 
 ### Properties
-* `summary` documentation stars with `Gets`, `Sets` or `Gets or sets` depending on whether it is read-only, write-only or fully accessible
+* `summary` documentation starts with `Gets`, `Sets` or `Gets or sets` depending on whether it is read-only, write-only or fully accessible
 ```
 /// <summary>
 /// Gets or sets the vertices.

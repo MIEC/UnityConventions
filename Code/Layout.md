@@ -1,25 +1,47 @@
 # Layout
 
-* Use 4 Spaces per indentation level
+* 4 Spaces per indentation level
 * Curly braces on new lines
-    * Exception: Entire statement in block fits in one line
+    * Except entire statement in block fits in one line
 * One statement per line
 * One namespace-level class per file
-* File name correspond to class names contained in file
-* Methods and propery definitions are separated by an empty line
+* Methods and property definitions separated by an empty line
 
-Example property:
 ```
-public bool Value
+namespace Examples
 {
-    get{ return true; }
-    set
+    public class ExampleClass
     {
-        SomeFunction();
-        _value = value;
+
+        [SerializeField] private bool _backedProp;
+
+        public bool Prop
+        {
+            get; set;
+        }
+
+        public bool BackedProp
+        {
+            get { return _backedProp; }
+            set { _backedProp = value; }
+        }
+
+        public void Foo()
+        {
+            FooBar();
+        }
+
+        [ContextMenu("FooBar")]
+        public void FooBar()
+        {
+            while(true)
+            {
+                // Die
+            }
+        }
+
     }
 }
-
 ```
 
 

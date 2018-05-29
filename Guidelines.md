@@ -12,4 +12,19 @@ Before we start with the hard and nitpicky definitions, here are some general gu
 * Use some kind of tests
   * Programming games in unity often looks like this: Make a change - Recompile - Play - Wait - Test functionality - Repeat. Depending on what you want to test the procedure takes most of the time. There is stuff that must be playtested, but then there are  features like health bars, damage dealing, serialization, ... that can be tested separately and much faster using automated unit tests.
   
-  To be extended...
+**THERE ARE NO PUBLIC VARIABLES**
+Use public properties with or without private backing field.
+If you just want to see the variable in the inspector use the [SerializeField] attribute
+
+```
+[SerializeField] private bool _theField;
+
+public bool TheField
+{
+  get{ return _theField; }
+  set
+  {
+    //Skip this if no setter is needed
+  }
+}
+```
